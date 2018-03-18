@@ -8,6 +8,32 @@
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-	<h1>Bem vindo!Mano cu GEREBA</h1>
+	<h1 text-align="center">BEM VINDO AO MARAVILHOSO BANCO DE CLIENTES</h1>
+
+	<div class="panel panel-default" style="margin: 10px">
+		<div class="panel-heading">
+			<h1 class="panel-title">Lista de Clientes</h1>
+		</div>
+		<div class="panel-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Endereço</th>
+						<th>E-mail</th>
+						<th>Tel:</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="cliente : ${cliente}">
+						<td th:text="${cliente.nome}"></td>
+						<td th:text="${convidado.endereco}"></td>
+						<td th:text="${cliente.email}"></td>
+						<td th:text="${cliente.telefone}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </body>
 </html>
